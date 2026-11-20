@@ -1,4 +1,4 @@
-
+@layer eigen-styling {
 @font-face {
     font-family: "Cherry Swash";
     src: url("../assets/CherrySwash-Regular.ttf");
@@ -39,14 +39,14 @@ h1 {
     font-weight: normal;
     line-height: 1.4;
     text-align: center;
-    color: #2e4229;
+    color: var(--tekst-kleur);
     margin: 0 0 20px;
 }
 
 h2 {
     font-size: 1.6rem;
     font-weight: normal;
-    color: #2e4229;
+    color: var(--tekst-kleur);
     margin: 0 0 5px;
 }
 
@@ -62,6 +62,12 @@ section {
 }
 
 /* onderste navigatie */
+
+.onderste-navigatie img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
 
 .onderste-navigatie {
     position: fixed;
@@ -173,7 +179,7 @@ section {
     font-weight: normal;
     margin: 0;
     text-align: center;
-    color: #2e4229;
+    color: var(--tekst-kleur);
 }
 
 /* kaart */
@@ -317,4 +323,6 @@ section {
         left: 50%;
         transform: translateX(-50%);
     }
+}
+
 }
