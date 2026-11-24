@@ -19,13 +19,19 @@ body {
 header {
     position: sticky;
     top: 0;
-    background-color: #f3ebdd;
+    background-color: var(--achtergrond-kleur);;
     padding: 20px;
     z-index: 100;
 }
 
 .logo {
     width: 65px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo {
+        filter: brightness(0) saturate(100%) invert(94%) sepia(12%) saturate(400%) hue-rotate(330deg);
+    }
 }
 
 /* homepage */
@@ -147,6 +153,7 @@ section {
 
 .veldverkenner-pagina {
     background-color: #f3ebdd;
+    padding: 0;
 }
 
 .veldverkenner-main {
