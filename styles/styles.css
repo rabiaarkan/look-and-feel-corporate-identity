@@ -69,12 +69,6 @@ section {
 
 /* onderste navigatie */
 
-.onderste-navigatie img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-}
-
 .onderste-navigatie {
     position: fixed;
     bottom: 0;
@@ -331,4 +325,31 @@ section {
 
 body {
     padding: 0;
+}
+
+.onderste-navigatie img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.onderste-navigatie .home-icoon {
+    width: 38px;
+    height: 38px;
+}
+
+.onderste-navigatie .collectie-icoon {
+    width: 40px;
+    height: 40px;
+}
+
+.onderste-navigatie {
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.onderste-navigatie a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
