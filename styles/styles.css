@@ -263,7 +263,7 @@ section {
 }
 
 .collectie-main p {
-    color: #2e4229;
+    color: var(--tekst-kleur);
     text-align: center;
     margin-bottom: 30px;
 }
