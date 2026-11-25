@@ -238,7 +238,7 @@ section {
     justify-content: center;
     position: sticky;
     top: 0;
-    background-color: #f3eadd;
+     background-color: var(--achtergrond-kleur);
     padding: 20px;
     z-index: 50;
 }
