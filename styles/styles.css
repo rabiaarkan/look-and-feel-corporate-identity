@@ -370,3 +370,23 @@ body {
         filter: brightness(0) saturate(100%) invert(34%) sepia(24%) saturate(680%) hue-rotate(350deg);
     }
 }
+
+@media (prefers-color-scheme: light) {
+    .kaart-frame {
+        content: url("../assets/kaartframe.svg");
+    }
+
+    .nieuws-frame {
+        content: url("../assets/newsframe.svg");
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .kaart-frame {
+        content: url("../assets/kaartframedark.svg");
+    }
+
+    .nieuws-frame {
+        content: url("../assets/newsframedark.svg");
+    }
+}
