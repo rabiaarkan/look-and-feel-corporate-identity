@@ -94,43 +94,6 @@ section {
     display: block;
 }
 
-/* groene waterleliebladen */
-
-.onderste-navigatie .blad {
-    position: absolute;
-    width: 78%;
-    height: auto;
-    left: 11%;
-    top: 42px;
-    z-index: 1;
-}
-
-/* gesloten bloemen */
-
-.onderste-navigatie .bloem-dicht {
-    position: absolute;
-    width: 75%;
-    height: auto;
-    left: 12.5%;
-    top: 10px;
-    z-index: 2;
-    opacity: 1;
-    transition: opacity 0.25s ease;
-}
-
-/* open bloemen */
-
-.onderste-navigatie .bloem-open {
-    position: absolute;
-    width: 115%;
-    height: auto;
-    left: -16.5%;
-    top: -5px;
-    z-index: 2;
-    opacity: 0;
-    transition: opacity 0.25s ease;
-}
-
 /* bloemen openen bij hover */
 
 .onderste-navigatie a:hover .bloem-dicht,
@@ -327,10 +290,12 @@ body {
     padding: 0;
 }
 
-.onderste-navigatie img {
+.onderste-navigatie img:not(.bloem-dicht):not(.bloem-open) {
     width: 45px;
     height: 45px;
     object-fit: contain;
+    position: relative;
+    z-index: 2;
 }
 
 .onderste-navigatie .home-icoon {
@@ -352,4 +317,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* gesloten bloemen */
+
+.onderste-navigatie .bloem-dicht {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    z-index: 1;
+    opacity: 1;
+    filter: none;
+    transition: opacity 0.25s ease;
+}
+
+/* open bloemen */
+
+.onderste-navigatie .bloem-open {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    z-index: 1;
+    opacity: 0;
+    filter: none;
+    transition: opacity 0.25s ease;
+}
+
+/* bloemen openen bij hover */
+
+.onderste-navigatie a:hover .bloem-dicht,
+.onderste-navigatie a:focus-visible .bloem-dicht {
+    opacity: 0;
+}
+
+.onderste-navigatie a:hover .bloem-open,
+.onderste-navigatie a:focus-visible .bloem-open {
+    opacity: 1;
 }
