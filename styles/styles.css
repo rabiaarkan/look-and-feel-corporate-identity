@@ -291,21 +291,23 @@ body {
 }
 
 .onderste-navigatie img:not(.bloem-dicht):not(.bloem-open) {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     object-fit: contain;
     position: relative;
     z-index: 2;
+    top: -5px;
+    left: -2px;
 }
 
-.onderste-navigatie .home-icoon {
-    width: 38px;
-    height: 38px;
+.onderste-navigatie.navigatie-iconen img.home-icoon {
+    width: 27px;
+    height: 27px;
 }
 
-.onderste-navigatie .collectie-icoon {
-    width: 40px;
-    height: 40px;
+.onderste-navigatie.navigatie-iconen img.collectie-icoon {
+    width: 28px;
+    height: 28px;
 }
 
 .onderste-navigatie {
@@ -355,4 +357,16 @@ body {
 .onderste-navigatie a:hover .bloem-open,
 .onderste-navigatie a:focus-visible .bloem-open {
     opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+    .onderste-navigatie img:not(.bloem-dicht):not(.bloem-open) {
+        filter: brightness(0) saturate(100%) invert(13%) sepia(12%) saturate(900%) hue-rotate(314deg);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    .onderste-navigatie img:not(.bloem-dicht):not(.bloem-open) {
+        filter: brightness(0) saturate(100%) invert(34%) sepia(24%) saturate(680%) hue-rotate(350deg);
+    }
 }
